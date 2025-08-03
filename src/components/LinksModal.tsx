@@ -21,7 +21,7 @@ const LinksModal = () => {
     {
       name: 'Resume',
       icon: FileText,
-      url: '/resume.pdf',
+      url: resume,
       description: 'Downloadable PDF resume',
       color: 'hover:bg-green-50 dark:hover:bg-green-900/20'
     },
