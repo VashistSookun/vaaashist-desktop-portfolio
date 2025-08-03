@@ -84,7 +84,7 @@ const Index = () => {
                   hi! <span className="text-primary">i'm vaaashist</span>
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  a current computer science student specializing in AI with an extension in Cybersecurity and a freelance Quantitative Research consultatnt
+                  a current computer science student specializing in AI with an extension in Cybersecurity and a freelance Quantitative Research consultant
                 </p>
               </div>
 
