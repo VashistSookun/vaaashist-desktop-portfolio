@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Cutesy Blue Sporty Theme */
+
+@layer base {
+  :root {
+    /* Portfolio Color Palette */
+    --primary-blue: 213 94% 68%;        /* #2563eb - bright blue */
+    --secondary-blue: 213 94% 58%;      /* #1e40af - darker blue */
+    --accent-blue: 213 93% 73%;         /* #60a5fa - light blue */
+    --light-blue: 199 89% 88%;          /* #b3e5fc - very light blue */
+    --background-start: 199 100% 94%;   /* #e0f2fe - gradient start */
+    --background-end: 199 89% 88%;      /* #b3e5fc - gradient end */
+    --text-dark: 217 91% 18%;           /* #1e293b - dark gray */
+    --white: 0 0% 100%;                 /* #ffffff - pure white */
+    
+    /* Semantic Design Tokens */
+    --background: linear-gradient(135deg, hsl(var(--background-start)), hsl(var(--background-end)));
+    --foreground: var(--text-dark);
+    --card: var(--white);
+    --card-foreground: var(--text-dark);
+    --popover: var(--white);
+    --popover-foreground: var(--text-dark);
+    --primary: var(--primary-blue);
+    --primary-foreground: var(--white);
+    --secondary: var(--accent-blue);
+    --secondary-foreground: var(--white);
+    --muted: var(--light-blue);
+    --muted-foreground: var(--text-dark);
+    --accent: var(--secondary-blue);
+    --accent-foreground: var(--white);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--white);
+    --border: var(--light-blue);
+    --input: var(--white);
+    --ring: var(--primary-blue);
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode Color Palette */
+    --primary-blue: 213 93% 73%;        /* Lighter blue for dark mode */
+    --secondary-blue: 213 94% 68%;      /* Bright blue */
+    --accent-blue: 199 89% 88%;         /* Light blue */
+    --background-start: 217 91% 18%;    /* #1e293b - dark start */
+    --background-end: 215 25% 27%;      /* #334155 - dark end */
+    --text-light: 199 89% 88%;          /* Light blue text */
+    --dark-card: 217 33% 17%;           /* Dark card background */
+    
+    /* Dark Mode Semantic Tokens */
+    --background: linear-gradient(135deg, hsl(var(--background-start)), hsl(var(--background-end)));
+    --foreground: var(--text-light);
+    --card: var(--dark-card);
+    --card-foreground: var(--text-light);
+    --popover: var(--dark-card);
+    --popover-foreground: var(--text-light);
+    --primary: var(--primary-blue);
+    --primary-foreground: var(--background-start);
+    --secondary: var(--accent-blue);
+    --secondary-foreground: var(--background-start);
+    --muted: var(--background-end);
+    --muted-foreground: var(--text-light);
+    --accent: var(--secondary-blue);
+    --accent-foreground: var(--background-start);
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: var(--white);
+    --border: var(--background-end);
+    --input: var(--dark-card);
+    --ring: var(--primary-blue);
+  }
+  
+  /* Cute Sports Animation Keyframes */
+  @keyframes dive {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(100px) rotate(-180deg); }
+    100% { transform: translateY(120px) rotate(-360deg); }
+  }
+  
+  @keyframes ripple {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.5); opacity: 0.2; }
+  }
+  
+  @keyframes kick {
+    0% { transform: translateX(0) scale(1); }
+    50% { transform: translateX(80px) scale(1.2) rotate(20deg); }
+    100% { transform: translateX(120px) scale(0.8) rotate(0deg); }
+  }
+  
+  @keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3) translateY(-10px); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes throw {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(-30deg) scale(1.1); }
+    100% { transform: rotate(0deg) scale(1); }
+  }
+  
+  @keyframes flyBall {
+    0% { transform: translateX(0) translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateX(200px) translateY(-100px) scale(0.5); opacity: 0.3; }
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+  }
+  
+  @keyframes modal-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  @keyframes spin-hover {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  /* Custom Animation Classes */
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .modal-enter {
+    animation: modal-in 0.3s ease-out;
+  }
+  
+  .spin-on-hover:hover {
+    animation: spin-hover 0.6s ease-in-out;
+  }
+  
+  .shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
